@@ -25,6 +25,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
 }
 
 dependencies {
@@ -39,6 +45,9 @@ dependencies {
 
     // Necesario para que Lombok funcione correctamente en Android Studio
     implementation 'androidx.annotation:annotation:1.6.0'
+
+    //Implementacion para TensorFlow Lite
+    implementation 'org.tensorflow:tensorflow-lite:2.9.0'
 
     implementation libs.appcompat
     implementation libs.material

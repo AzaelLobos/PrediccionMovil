@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prediccion.entity.ImageDescription;
+import com.example.prediccion.entity.ImageDescriptionProvider;
 import com.example.prediccion.entity.Iris;
 import com.example.prediccion.service.IrisService;
 import com.example.prediccion.service.impl.IrisServiceImpl;
@@ -43,11 +47,25 @@ public class MainActivity extends AppCompatActivity {
 
     // Método para mostrar el diálogo de predicción
     private void showPredictionDialog(String prediction) {
+        String irisClass = prediction.split(",")[0].trim(); // Assuming prediction format is "class, percentage%"
+        ImageDescriptionProvider provider = new ImageDescriptionProvider(this);
+        ImageDescription imageDescription = provider.getRandomImageDescription(irisClass);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Predicción")
                 .setMessage(prediction)
-                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
-                .show();
+                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+
+        // Inflate custom layout
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_image, null);
+        ImageView imageView = dialogView.findViewById(R.id.dialog_image_view);
+        TextView descriptionView = dialogView.findViewById(R.id.dialog_image_description);
+
+        imageView.setImageResource(imageDescription.getImageResId());
+        descriptionView.setText(imageDescription.getDescription());
+
+        builder.setView(dialogView);
+        builder.show();
     }
 
     public void onClickPrediccion(View v) {

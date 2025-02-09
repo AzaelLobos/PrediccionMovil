@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prediccion</string>
+    <string name="app_name">Predicción</string>
     <string-array name="opciones">
         <item>Selecciona una opción</item>
         <item>1</item>
@@ -7,4 +7,30 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
+    <!-- Descripción genérica para la imagen en el diálogo -->
+    <string name="image_description">Descripción de la imagen</string>
+
+    <!-- Descripciones para Iris Setosa -->
+    <string name="iris_setosa_desc_1">El Iris Setosa pertenece a la familia Iridaceae y destaca por sus llamativas flores perennes.</string>
+    <string name="iris_setosa_desc_2">El Iris Setosa proporciona un hábitat ideal para diversas especies de insectos y aves en zonas húmedas.</string>
+    <string name="iris_setosa_desc_3">Se encuentra principalmente en áreas de clima frío y húmedo, como tundras y zonas boreales.</string>
+    <string name="iris_setosa_desc_4">El Iris Setosa se caracteriza por sus pétalos azulados y una estructura delicada y elegante.</string>
+    <string name="iris_setosa_desc_5">Tradicionalmente, el Iris Setosa ha sido usado en prácticas medicinales y como planta ornamental.</string>
+
+
+    <!-- Descripciones para Iris Versicolour -->
+    <string name="iris_versicolour_desc_1">El Iris Versicolour requiere suelos húmedos y bien drenados, con exposición moderada al sol.</string>
+    <string name="iris_versicolour_desc_2">El Iris Versicolour habita en pantanos, praderas húmedas y orillas de ríos en América del Norte.</string>
+    <string name="iris_versicolour_desc_3">Es una planta importante para la restauración ecológica, especialmente en zonas húmedas degradadas.</string>
+    <string name="iris_versicolour_desc_4">El Iris Versicolour se ha utilizado en medicina tradicional para tratar problemas de piel y digestión.</string>
+    <string name="iris_versicolour_desc_5">Presenta una morfología floral única, con pétalos violetas y marcas amarillas distintivas.</string>
+
+
+    <!-- Descripciones para Iris Virginica -->
+    <string name="iris_virginica_desc_1">El Iris Virginica es apreciado por sus vibrantes colores, que van desde el púrpura hasta el azul claro.</string>
+    <string name="iris_virginica_desc_2">Es una planta fácil de cultivar y propagar, ideal para jardinería en zonas húmedas.</string>
+    <string name="iris_virginica_desc_3">Se encuentra comúnmente en humedales y áreas costeras del este de Estados Unidos.</string>
+    <string name="iris_virginica_desc_4">El Iris Virginica desempeña un papel ecológico vital como fuente de alimento para insectos polinizadores.</string>
+    <string name="iris_virginica_desc_5">El Iris Virginica tiene un profundo significado cultural en varias comunidades, representando pureza y belleza.</string>
 </resources>

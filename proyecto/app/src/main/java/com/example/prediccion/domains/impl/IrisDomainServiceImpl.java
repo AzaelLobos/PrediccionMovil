@@ -1,7 +1,5 @@
 package com.example.prediccion.domains.impl;
 
-
-
 import android.content.Context;
 
 import com.example.prediccion.TFL.TensorFlowLiteModel;
@@ -45,7 +43,7 @@ public class IrisDomainServiceImpl implements IrisDomainService {
                 }
             }
 
-            return String.format("{\"class\": \"%s\", \"percentage\": %.2f}", bestClass, highestPercentage);
+            return String.format("%s, %.2f%%", bestClass, highestPercentage);
         } catch (Exception e) {
             e.printStackTrace();
             return "Error processing prediction";

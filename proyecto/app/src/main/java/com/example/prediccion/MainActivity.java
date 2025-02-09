@@ -18,7 +18,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.prediccion.entity.Iris;
+import com.example.prediccion.service.IrisService;
+import com.example.prediccion.service.impl.IrisServiceImpl;
+import com.example.prediccion.domains.impl.IrisDomainServiceImpl;
+
 public class MainActivity extends AppCompatActivity {
+    private Spinner spinner1, spinner2, spinner3, spinner4;
+    private IrisService irisService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +37,15 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        irisService = new IrisServiceImpl(new IrisDomainServiceImpl(this));
     }
 
     // Método para mostrar el diálogo de predicción
-    private void showPredictionDialog() {
+    private void showPredictionDialog(String prediction) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Predicción")
-                .setMessage("Tu predicción se está procesando...")
+                .setMessage(prediction)
                 .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
                 .show();
     }
@@ -45,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.vista_prediccion);
 
         // Configurar los Spinners
-        Spinner spinner1 = findViewById(R.id.pregunta1);
-        Spinner spinner2 = findViewById(R.id.pregunta2);
-        Spinner spinner3 = findViewById(R.id.pregunta3);
-        Spinner spinner4 = findViewById(R.id.pregunta4);
+        spinner1 = findViewById(R.id.pregunta1);
+        spinner2 = findViewById(R.id.pregunta2);
+        spinner3 = findViewById(R.id.pregunta3);
+        spinner4 = findViewById(R.id.pregunta4);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.opciones, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -84,11 +93,31 @@ public class MainActivity extends AppCompatActivity {
         btnPredecir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPredictionDialog();
+                predictAndShowDialog();
             }
         });
     }
 
+    private void predictAndShowDialog() {
+        String seleccion1 = spinner1.getSelectedItem().toString();
+        String seleccion2 = spinner2.getSelectedItem().toString();
+        String seleccion3 = spinner3.getSelectedItem().toString();
+        String seleccion4 = spinner4.getSelectedItem().toString();
+
+        if (!seleccion1.equals("Selecciona una opción") && !seleccion2.equals("Selecciona una opción") &&
+                !seleccion3.equals("Selecciona una opción") && !seleccion4.equals("Selecciona una opción")) {
+            float a1 = Float.parseFloat(seleccion1);
+            float a2 = Float.parseFloat(seleccion2);
+            float a3 = Float.parseFloat(seleccion3);
+            float a4 = Float.parseFloat(seleccion4);
+
+            Iris iris = new Iris(a1, a2, a3, a4);
+            String prediction = irisService.prediccion(iris);
+            showPredictionDialog(prediction);
+        } else {
+            Toast.makeText(this, "Por favor selecciona opciones del 1 al 4", Toast.LENGTH_SHORT).show();
+        }
+    }
     public void onClickInformacion(View v) {
         setContentView(R.layout.vista_informacion);
 

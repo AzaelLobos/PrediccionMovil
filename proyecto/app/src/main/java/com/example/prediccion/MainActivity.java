@@ -11,7 +11,6 @@ import android.widget.Spinner;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
@@ -21,7 +20,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.prediccion.entity.ImageDescription;
-import com.example.prediccion.entity.ImageDescriptionProvider;
+import com.example.prediccion.TFL.ImageDescriptionProvider;
 import com.example.prediccion.entity.Iris;
 import com.example.prediccion.service.IrisService;
 import com.example.prediccion.service.impl.IrisServiceImpl;

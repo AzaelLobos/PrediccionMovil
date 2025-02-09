@@ -28,6 +28,12 @@ public class Informacion extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnVolver.setOnClickListener(v -> finish());
+        btnVolver.setOnClickListener(v -> {
+            // Abrir MainActivity explícitamente
+            Intent intent = new Intent(Informacion.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Elimina todas las actividades anteriores
+            startActivity(intent);
+            finish();  // Cierra la actividad actual (Informacion)
+        });
     }
 }

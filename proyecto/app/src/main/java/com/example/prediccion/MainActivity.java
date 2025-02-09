@@ -145,12 +145,12 @@ public class MainActivity extends AppCompatActivity {
         Button btnRegresar3 = findViewById(R.id.btn_Regresar3);
 
         btnWeb1.setOnClickListener(view1 -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://qu4nt.github.io/sklearn-doc-es/modules/naive_bayes.html"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://archive.ics.uci.edu/dataset/53/iris"));
             startActivity(intent);
         });
 
         btnWeb2.setOnClickListener(view2 -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://archive.ics.uci.edu/dataset/53/iris"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://qu4nt.github.io/sklearn-doc-es/modules/naive_bayes.html"));
             startActivity(intent);
         });
 

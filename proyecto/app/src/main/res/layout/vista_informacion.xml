@@ -16,37 +16,39 @@
         android:layout_height="match_parent"
         android:background="#4D000000" />
 
+    <!-- Contenedor principal centrado -->
     <LinearLayout
+        android:id="@+id/contenedorPrincipal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardTexto"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="4dp"
-        android:layout_gravity="center"
-        android:backgroundTint="@android:color/white"
-        app:cardBackgroundColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/textoInfo"
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTexto"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:text="La necesidad surge de la importancia de combinar educación y tecnología para hacer que el aprendizaje sobre biodiversidad sea más atractivo y accesible. El proyecto busca desarrollar una aplicacion movil interactiva para conectar a los usuarios con el conocimiento sobre la flora de una manera educativa, visual y accesible.\nEl proyecto ofrece un contenido interactivo y educativo en línea para que de esta manera se promueva el aprendizaje de la biodiversidad, mientras se hace un enfoque tecnológico utilizando análisis probabilísticos. A través de un cuestionario dinámico, se permite a los usuarios identificar especies con base en atributos específicos, obteniendo como resultado una predicción porcentual acompañada de imágenes y descripciones relacionadas."
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:gravity="start"
-            android:justificationMode="inter_word"/>
+            android:layout_marginTop="40dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/white"
+            app:cardBackgroundColor="#FFFFFF">
 
+            <TextView
+                android:id="@+id/textoInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="La necesidad surge de la importancia de combinar educación y tecnología para hacer que el aprendizaje sobre biodiversidad sea más atractivo y accesible. El proyecto busca desarrollar una aplicacion movil interactiva para conectar a los usuarios con el conocimiento sobre la flora de una manera educativa, visual y accesible.\nEl proyecto ofrece un contenido interactivo y educativo en línea para que de esta manera se promueva el aprendizaje de la biodiversidad, mientras se hace un enfoque tecnológico utilizando análisis probabilísticos. A través de un cuestionario dinámico, se permite a los usuarios identificar especies con base en atributos específicos, obteniendo como resultado una predicción porcentual acompañada de imágenes y descripciones relacionadas."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:gravity="start"
+                android:justificationMode="inter_word"/>
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
@@ -62,21 +64,20 @@
                 android:layout_width="70dp"
                 android:layout_height="71dp"
                 android:layout_marginEnd="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Botón 1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img" />
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Botón 1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img" />
 
             <ImageButton
                 android:id="@+id/btnWeb2"
                 android:layout_width="66dp"
                 android:layout_height="71dp"
-            android:layout_marginStart="16dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Botón 2"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img_1" />
-
+                android:layout_marginStart="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Botón 2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_1" />
         </LinearLayout>
 
         <Button
@@ -84,16 +85,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/white"
-        android:onClick="onClickRegresar"
-        android:text="Regresar"
-        android:textColor="@color/black"
-        android:textSize="17sp"
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
-        app:strokeColor="@color/black"
-        app:strokeWidth="@dimen/cardview_default_radius" />
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/white"
+            android:onClick="onClickRegresar"
+            android:text="Regresar"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Small"
+            app:strokeColor="@color/black"
+            app:strokeWidth="@dimen/cardview_default_radius"/>
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,13 +24,15 @@
         android:id="@+id/linearLayout"
         android:layout_width="318dp"
         android:layout_height="640dp"
-        android:layout_marginTop="72dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5">
 
-        <TextView
+
+    <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,7 +44,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="464dp"
             android:layout_marginTop="40dp"
             android:backgroundTint="#FFFFFF"
             app:cardCornerRadius="16dp"
@@ -50,11 +52,11 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="464dp"
-                android:layout_marginTop="5dp"
+                android:layout_height="match_parent"
                 android:background="#FFFFFF"
                 android:orientation="vertical"
-                android:paddingLeft="16dp">
+                android:padding="16dp"
+                android:gravity="center_vertical">  <!-- Centra verticalmente el contenido -->
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -73,10 +75,9 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="221dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingEnd="16dp"
                         android:text="¿Cuál es la longitud del sépalo?"
                         android:textColor="@color/material_dynamic_secondary10"
                         android:textSize="16sp" />
@@ -85,8 +86,6 @@
                         android:id="@+id/pregunta1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
                         android:background="@drawable/spinner_background"
                         android:backgroundTint="#C5C1C1" />
                 </LinearLayout>
@@ -100,10 +99,9 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingEnd="16dp"
                         android:text="¿Cuál es el ancho del sépalo?"
                         android:textColor="@color/material_dynamic_secondary10"
                         android:textSize="16sp" />
@@ -112,8 +110,6 @@
                         android:id="@+id/pregunta2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
                         android:background="@drawable/spinner_background"
                         android:backgroundTint="#C5C1C1" />
                 </LinearLayout>
@@ -127,10 +123,9 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="217dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingEnd="16dp"
                         android:text="¿Cuál es la longitud del pétalo?"
                         android:textColor="@color/material_dynamic_secondary10"
                         android:textSize="16sp" />
@@ -139,8 +134,6 @@
                         android:id="@+id/pregunta3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
                         android:background="@drawable/spinner_background"
                         android:backgroundTint="#C5C1C1" />
                 </LinearLayout>
@@ -154,10 +147,9 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:paddingEnd="16dp"
                         android:text="¿Cuál es el ancho del pétalo?"
                         android:textColor="@color/material_dynamic_secondary10"
                         android:textSize="16sp" />
@@ -166,8 +158,6 @@
                         android:id="@+id/pregunta4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:layout_weight="1"
                         android:background="@drawable/spinner_background"
                         android:backgroundTint="#C5C1C1" />
                 </LinearLayout>
@@ -185,6 +175,7 @@
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraSmall" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
 
         <Button
             android:id="@+id/btn_Regresar3"

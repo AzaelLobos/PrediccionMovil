@@ -40,15 +40,14 @@
             android:id="@+id/textoInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:justificationMode="inter_word"
             android:padding="16dp"
-            android:text="La necesidad surge de la importancia de combinar educación y tecnología para hacer que el aprendizaje sobre biodiversidad sea más atractivo y accesible. El proyecto busca desarrollar una aplicacion movil interactiva para conectar a los usuarios con el conocimiento sobre la flora de una manera educativa, visual y accesible.
-\nEl proyecto ofrece un contenido interactivo y educativo en línea para que de esta manera se promueva el aprendizaje de la biodiversidad, mientras se hace un enfoque tecnológico utilizando análisis probabilísticos. A través de un cuestionario dinámico, se permite a los usuarios identificar especies con base en atributos específicos, obteniendo como resultado una predicción porcentual acompañada de imágenes y descripciones relacionadas."
-            android:textAlignment="center"
+            android:text="La necesidad surge de la importancia de combinar educación y tecnología para hacer que el aprendizaje sobre biodiversidad sea más atractivo y accesible. El proyecto busca desarrollar una aplicacion movil interactiva para conectar a los usuarios con el conocimiento sobre la flora de una manera educativa, visual y accesible.\nEl proyecto ofrece un contenido interactivo y educativo en línea para que de esta manera se promueva el aprendizaje de la biodiversidad, mientras se hace un enfoque tecnológico utilizando análisis probabilísticos. A través de un cuestionario dinámico, se permite a los usuarios identificar especies con base en atributos específicos, obteniendo como resultado una predicción porcentual acompañada de imágenes y descripciones relacionadas."
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
-    </androidx.cardview.widget.CardView>
+            android:textSize="16sp"
+            android:gravity="start"
+            android:justificationMode="inter_word"/>
+
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:id="@+id/contenedorBotones"
